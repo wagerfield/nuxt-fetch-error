@@ -26,7 +26,7 @@ The erroneous behaviour to be observed is that the second log (`dynamic.validate
 
 However, since the `params` object that is being passed in the context to the `validate` method is empty, the `validate` method returns false since the condition fails:
 
-### `pages/dynamic.vue`
+### `pages/dynamic/_slug.vue`
 
 ```js
 export default {
