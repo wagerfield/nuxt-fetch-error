@@ -38,6 +38,6 @@ export default {
 }
 ```
 
-Since `params` is an empty object, the validation fails and the cryptic error (`{__ob__: Observer}`) is printed to the console.
+Since `params` is an empty object, the validation fails and the cryptic error (`{__ob__: Observer}`) is printed to the console. Even though it would appear that the `redirect` logic occurs before the page is rendered, the `validate` method is still called but with the `params` object of the `/dynamic` route (which has no params).
 
 If you comment out the `validate` method, navigate back to the index page and then click on the "Dynamic" link again, you will notice another strange behaviour: `dynamic.fetch: {"slug":"valid"}` is printed to the console _twice_?
