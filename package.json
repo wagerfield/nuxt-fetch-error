@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "nuxt"
+  },
+  "dependencies": {
+    "nuxt": "^1.1.1"
+  }
+}
