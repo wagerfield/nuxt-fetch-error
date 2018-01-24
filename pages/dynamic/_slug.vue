@@ -7,10 +7,10 @@
 
 <script>
 export default {
-  // validate({ params }) {
-  //   console.log('dynamic.validate:', JSON.stringify(params))
-  //   return params.slug === 'valid'
-  // },
+  validate({ params }) {
+    console.log('dynamic.validate:', JSON.stringify(params))
+    return params.slug === 'valid'
+  },
   fetch({ params }) {
     console.log('dynamic.fetch:', JSON.stringify(params))
     return Promise.resolve(params)
