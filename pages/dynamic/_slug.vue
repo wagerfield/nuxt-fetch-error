@@ -1,18 +1,23 @@
 <template>
   <div>
-    <h1>Dummy {{$route.params}}</h1>
-    <nuxt-link to="/">Index</nuxt-link>
+    <h1>Dynamic Page</h1>
+    <ul>
+      <li><nuxt-link to="/">/index</nuxt-link></li>
+      <li><nuxt-link to="/one">/one</nuxt-link></li>
+      <li><nuxt-link to="/two">/two</nuxt-link></li>
+    </ul>
+    <pre>route.params: {{$route.params}}</pre>
   </div>
 </template>
 
 <script>
 export default {
   validate({ params }) {
-    console.log('dynamic.validate:', JSON.stringify(params))
+    console.log('dynamic.validate:', params)
     return params.slug === 'valid'
   },
   fetch({ params }) {
-    console.log('dynamic.fetch:', JSON.stringify(params))
+    console.log('dynamic.fetch:', params)
     return Promise.resolve(params)
   }
 }
